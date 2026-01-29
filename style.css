@@ -75,6 +75,7 @@ body {
     }
 }
 .first li{
+    cursor: pointer;
     position: relative;
     & ul{
         position: absolute;
@@ -118,7 +119,8 @@ body {
         outline: none;
         background-color: var(--sbg);
         padding: 5px 10px;
-        font-size: 1.2rem;
+        font-size: .9rem;
+        color: #333;
     }
 
     & input[type="button"] {
