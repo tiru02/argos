@@ -56,6 +56,11 @@ body{
     width: 30%;
     display: flex;
     justify-content: space-evenly;
+    & li h4{
+        font-size: 1rem;
+        font-weight: 100;
+        color: #333;
+    }
 }
 .search{
     display: flex;
@@ -64,7 +69,7 @@ body{
     width: 40%;
     & input[type="text"]{
         width: 85%;
-        height: 80%;
+        height: 70%;
         border-radius: 50px 0 0 50px;
         border: none;
         outline: none;
@@ -74,7 +79,7 @@ body{
     }
     & input[type="button"]{
         width: 15%;
-        height: 80%;
+        height: 70%;
         border-radius: 0 50px 50px 0;
         background:gray;
         font-weight: 900;
