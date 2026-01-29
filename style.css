@@ -58,5 +58,24 @@ body{
     justify-content: space-evenly;
 }
 .search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40%;
+    & input[type="text"]{
+        width: 85%;
+        height: 80%;
+        border-radius: 50px 0 0 50px;
+    }
+    & input[type="button"]{
+        width: 15%;
+        height: 70%;
+        border-radius: 0 50px 50px 0;
+        background:#333;
+        font-weight: 900;
+        font-size: 1rem;
+        color:var(--bg);
+        border: none;
+        outline: none;
+    }
 }
