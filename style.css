@@ -129,7 +129,7 @@ body {
 
     & input[type="text"] {
         width: 85%;
-        height: 55%;
+        height: 47%;
         border-radius: 50px 0 0 50px;
         border: none;
         outline: none;
@@ -141,7 +141,7 @@ body {
 
     & input[type="button"] {
         width: 15%;
-        height: 55%;
+        height: 47%;
         border-radius: 0 50px 50px 0;
         background: gray;
         font-weight: 900;
