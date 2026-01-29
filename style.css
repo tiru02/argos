@@ -39,6 +39,7 @@ body {
     color: #333;
     padding: 0 1.2rem;
     white-space: nowrap;
+    cursor: pointer;
 
     & img {
         height: 1.3rem;
@@ -52,13 +53,17 @@ body {
     height: 6rem;
     border-bottom: 1px solid #c0c0c0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 1.1rem;
+    padding:0 1.1rem;
 
     & ul {
         list-style: none;
         padding: 1.1rem;
 
+    }
+    & img{
+        width: 4.5rem;
     }
 }
 
@@ -77,14 +82,24 @@ body {
 .first li{
     cursor: pointer;
     position: relative;
+    height: 100%;
     & ul{
         position: absolute;
         left: 0;
         transform: translateY(30px);
         background-color: var(--bg);
-        padding: 10px 0;
+        padding: 0;
         display: none;
-
+        white-space: nowrap;
+        width: max-content;
+        box-shadow: 1px 1px 3px gray;
+        & li{
+            padding: 10px 20px;
+            border-bottom: 1px solid #c0c0c0;
+        }
+        & li::before{
+            display: none;
+        }
     }
     &:hover ul{
         display: block;
@@ -110,10 +125,11 @@ body {
     align-items: center;
     justify-content: center;
     width: 40%;
+    height: 100%;
 
     & input[type="text"] {
         width: 85%;
-        height: 70%;
+        height: 55%;
         border-radius: 50px 0 0 50px;
         border: none;
         outline: none;
@@ -125,7 +141,7 @@ body {
 
     & input[type="button"] {
         width: 15%;
-        height: 70%;
+        height: 55%;
         border-radius: 0 50px 50px 0;
         background: gray;
         font-weight: 900;
@@ -134,4 +150,20 @@ body {
         border: none;
         outline: none;
     }
+}
+.inside-menu{
+    position: relative;
+}
+.inside-menu::after{
+    content: url(arrow.svg);
+    height: 10px;
+    width: 10px;
+    top: 40%;
+    padding: 0 5px;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: transform .2s linear;
+}
+.inside-menu:hover::after{
+    transform: rotateZ(180deg) translateY(-40%);
 }
