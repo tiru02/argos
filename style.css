@@ -66,12 +66,17 @@ body{
         width: 85%;
         height: 80%;
         border-radius: 50px 0 0 50px;
+        border: none;
+        outline: none;
+        background-color: var(--sbg);
+        padding:5px 10px;
+        font-size: 1.2rem;
     }
     & input[type="button"]{
         width: 15%;
-        height: 70%;
+        height: 80%;
         border-radius: 0 50px 50px 0;
-        background:#333;
+        background:gray;
         font-weight: 900;
         font-size: 1rem;
         color:var(--bg);
