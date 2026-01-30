@@ -345,13 +345,13 @@ body {
     }
 }
 .fixed-container{
-    width: 100%;
+    width: 200%;
     height: 6rem;
     display: flex;
     position: absolute;
     left: 10%;
     gap: 20px;
-    transition: all .2s ease-in;
+    transition: all .2s ease;
     & .card{
         width:6rem;
         height: 8rem;
