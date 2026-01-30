@@ -326,6 +326,7 @@ body {
     & input[right]{
         width: 45px;
         height: 45px;
+        display: none;
         background:rgb(120, 120, 233);
         color: var(--bg);
         font-size: 2rem;
@@ -350,7 +351,7 @@ body {
     position: absolute;
     left: 10%;
     gap: 20px;
-    transition: all .2s ease;
+    transition: all .2s ease-in;
     & .card{
         width:6rem;
         height: 8rem;
