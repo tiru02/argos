@@ -10,9 +10,12 @@
 }
 
 body {
-    background-color: var(--bg);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
 
 .smallNav {
     background-color: var(--sbg);
@@ -37,7 +40,7 @@ body {
     display: flex;
     align-items: center;
     padding: .05rem .5rem;
-    color: #333;
+    /* color: #333; */
     padding: 0 1.2rem;
     white-space: nowrap;
     cursor: pointer;
@@ -76,8 +79,8 @@ body {
 
     & li h4 {
         font-size: 1rem;
-        font-weight: 100;
-        color: #333;
+        color: inherit;
+        font-weight: inherit;
     }
 }
 
@@ -97,7 +100,6 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        font-weight: 100;
         gap: 7px;
     }
 
@@ -122,6 +124,7 @@ body {
         white-space: nowrap;
         width: max-content;
         box-shadow: 1px 1px 3px gray;
+        z-index: 9;
 
         & li {
             padding: 10px 20px;
@@ -182,7 +185,7 @@ body {
         background-color: var(--sbg);
         padding: 5px 10px;
         font-size: .9rem;
-        color: #333;
+        /* color: #333; */
     }
 
     & input[type="button"] {
@@ -227,7 +230,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: start;
-    padding:0 22px;
+    padding: 0 22px;
     color: var(--sbg);
     font-size: .9rem;
     font-weight: 900;
@@ -281,36 +284,42 @@ body {
         border: none;
     }
 }
-.first-container{
+
+.first-container {
     position: relative;
     width: 100%;
     height: 12rem;
     overflow: hidden;
+    /* scrollbar-width: none; */
     display: flex;
     align-items: center;
-    &::before{
+
+    /* &::-webkit-scrollbar{
+        display: none;
+    } */
+    &::before {
         content: '';
         position: absolute;
         left: 0;
         width: 10%;
         height: 100%;
-        backdrop-filter: blur(10px);
-        background: linear-gradient(to right,var(--bg),#ffffff51);
+        background: linear-gradient(to right, var(--bg), #ffffff51);
         z-index: 9;
     }
-    &::after{
+
+    &::after {
         content: '';
         position: absolute;
         right: 0;
         width: 10%;
         height: 100%;
-        backdrop-filter: blur(10px);
-        background: linear-gradient(to left,var(--bg),#ffffff51);
+        background: linear-gradient(to left, var(--bg), #ffffff51);
     }
-    & input[left]{
+
+    & input[left] {
         width: 45px;
         height: 45px;
-        background:rgb(120, 120, 233);
+        background: rgb(120, 120, 233);
         color: var(--bg);
         font-size: 2rem;
         font-weight: 900;
@@ -318,16 +327,17 @@ body {
         border-radius: 50px;
         left: 50px;
         top: 50%;
-        transform: translate(0,-50%);
+        transform: translate(0, -50%);
         z-index: 9;
         text-shadow: 1px 1px 3px gray;
         border: none;
     }
-    & input[right]{
+
+    & input[right] {
         width: 45px;
         height: 45px;
         display: none;
-        background:rgb(120, 120, 233);
+        background: rgb(120, 120, 233);
         color: var(--bg);
         font-size: 2rem;
         font-weight: 900;
@@ -335,16 +345,18 @@ body {
         border-radius: 50px;
         right: 50px;
         top: 50%;
-        transform: translate(0,-50%);
+        transform: translate(0, -50%);
         z-index: 9;
         text-shadow: 1px 1px 3px gray;
         border: none;
     }
-    & input:active{
+
+    & input:active {
         filter: brightness(90%);
     }
 }
-.fixed-container{
+
+.fixed-container {
     width: 200%;
     height: 6rem;
     display: flex;
@@ -352,22 +364,28 @@ body {
     left: 10%;
     gap: 20px;
     transition: all .2s ease;
-    & .card{
-        width:6rem;
+
+    & .card {
+        width: 6rem;
         height: 8rem;
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: center;
         justify-content: center;
-        & img{
+
+        & img {
             width: 80%;
             height: auto;
         }
-        & h4{
-            font-weight: 100;
+
+        & h4 {
+            /* font-weight: 100; */
+            font-weight: inherit;
+            color: inherit;
         }
-        &:hover{
+
+        &:hover {
             scale: .95;
             text-decoration: underline;
         }
