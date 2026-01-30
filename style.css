@@ -11,6 +11,7 @@
 
 body {
     background-color: var(--bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .smallNav {
@@ -71,12 +72,35 @@ body {
 .second {
     width: 30%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     & li h4 {
         font-size: 1rem;
         font-weight: 100;
         color: #333;
+    }
+}
+.first{
+    width: 35%;
+}
+.second{
+    width: 20%;
+    height: 100%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    & li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: 100;
+        gap: 7px;
+    }
+    & li img{
+        width: 25px;
+        height: 25px;
     }
 }
 .first li{
@@ -134,7 +158,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 47%;
     height: 100%;
 
     & input[type="text"] {
@@ -176,4 +200,36 @@ body {
 }
 .inside-menu:hover::after{
     transform: rotateZ(180deg) translateY(-40%);
+}
+.trevo-bt{
+    position: relative;
+    width: 13%;
+    height: 47%;
+    background:linear-gradient(to right,#04562A,#018943);
+    margin: 0 40px 0 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sbg);
+    font-size: .9rem;
+    font-weight: 900;
+    &::before{
+        content: url(star.svg);
+        position: absolute;
+        left: 15px;
+        scale: 1.2;
+        transform: rotateX(180deg) translateY(15%);
+    }
+    &::after{
+        content: url(dino.svg);
+        position: absolute;
+        width:37px;
+        height: 37px;
+        border-radius: 50%;
+        background-color:#E6EECF;
+        right: 0;
+        border: 3px solid #04562A;
+        overflow: hidden;
+    }
 }
