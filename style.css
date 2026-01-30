@@ -85,8 +85,8 @@ body {
     height: 100%;
     & ul{
         position: absolute;
-        left: 0;
-        transform: translateY(30px);
+        left: 50%;
+        transform: translate(-50%,30px);
         background-color: var(--bg);
         padding: 0;
         display: none;
