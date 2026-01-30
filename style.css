@@ -292,18 +292,18 @@ body {
         content: '';
         position: absolute;
         left: 0;
-        width: 20%;
+        width: 10%;
         height: 100%;
-        background: linear-gradient(to right,var(--bg),#ffffff21);
+        background: linear-gradient(to right,var(--bg),#ffffff51);
         z-index: 9;
     }
     &::after{
         content: '';
         position: absolute;
         right: 0;
-        width: 20%;
+        width: 10%;
         height: 100%;
-        background: linear-gradient(to left,var(--bg),#ffffff21);
+        background: linear-gradient(to left,var(--bg),#ffffff51);
     }
 }
 .fixed-container{
@@ -313,6 +313,7 @@ body {
     position: absolute;
     left: 10%;
     gap: 20px;
+    transition: all 1s linear;
     & .card{
         width:6rem;
         height: 8rem;
@@ -322,5 +323,8 @@ body {
         gap: 10px;
         align-items: center;
         justify-content: center;
+    }
+    &:hover{
+        transform: translateX(-25%);
     }
 }
