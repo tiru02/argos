@@ -377,8 +377,7 @@ body {
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        justify-content: baseline;
-        text-align: center;
+        justify-content: center;
 
         & img {
             width: 80%;
@@ -636,4 +635,9 @@ body {
     width: 100%;
     height: 100%;
     background: #00000059;
+}
+#img-scroller{
+    width: 100%;
+    height:30rem;
+    overflow: hidden;
 }
