@@ -377,7 +377,8 @@ body {
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        justify-content: center;
+        justify-content: baseline;
+        text-align: center;
 
         & img {
             width: 80%;
@@ -539,6 +540,13 @@ body {
             position: absolute;
             right: 10px;
 
+        }
+        &:hover h4::after{
+            transform: rotate(-90deg);
+            transition: transform .3s ease;
+        }
+        & div h4::after{
+            content: "";
         }
     }
 
