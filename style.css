@@ -636,8 +636,9 @@ body {
     height: 100%;
     background: #00000059;
 }
-#img-scroller{
+.slide{
     width: 100%;
     height:30rem;
     overflow: hidden;
+    padding: 10px 0;
 }
