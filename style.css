@@ -113,7 +113,7 @@ body {
     cursor: pointer;
     position: relative;
     height: 100%;
-
+    
     & ul {
         position: absolute;
         left: 50%;
@@ -124,12 +124,18 @@ body {
         white-space: nowrap;
         width: max-content;
         box-shadow: 1px 1px 3px gray;
-        z-index: 9;
+        z-index: 99;
+        padding: 20px;
 
         & li {
             padding: 10px 20px;
             border-bottom: 1px solid #c0c0c0;
+            min-width: 15rem;
+            min-height: 3rem;
         }
+        & li:hover{
+            background: #eee;
+        }   
 
         & li::before {
             display: none;
@@ -317,15 +323,15 @@ body {
     }
 
     & input[left] {
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         background: rgb(120, 120, 233);
         color: var(--bg);
         font-size: 2rem;
         font-weight: 900;
         position: absolute;
         border-radius: 50px;
-        left: 50px;
+        left: 100px;
         top: 50%;
         transform: translate(0, -50%);
         z-index: 9;
@@ -334,8 +340,8 @@ body {
     }
 
     & input[right] {
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         display: none;
         background: rgb(120, 120, 233);
         color: var(--bg);
@@ -343,7 +349,7 @@ body {
         font-weight: 900;
         position: absolute;
         border-radius: 50px;
-        right: 50px;
+        right: 100px;
         top: 50%;
         transform: translate(0, -50%);
         z-index: 9;
@@ -390,4 +396,224 @@ body {
             text-decoration: underline;
         }
     }
+}
+
+.image-scroller {
+    width: 80rem;
+    height: 30rem;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+
+    /* background-color: red;  */
+    & img {
+        width: 80rem;
+        height: 400px;
+        position: absolute;
+        overflow: hidden;
+
+    }
+
+    & img:last-child {
+        order: 1;
+    }
+}
+
+.big-cards {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    margin: 2rem 0;
+    display: flex;
+    padding: 3rem 0 10px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    & .cards {
+        width: 20rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        & img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 10px;
+        }
+
+        & button {
+            width: 100%;
+            padding: 10px 20px;
+            background: green;
+            border: none;
+            outline: none;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+    }
+}
+
+.dash-image {
+    width: 85%;
+    height: 10rem;
+    border-radius: 10px;
+    background: url(https://media.4rgos.it/i/Argos/4726-M020-a-list-desktab?w=auto&qlt=50&fmt=webp&noiser=0&);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.headline {
+    display: inline-block;
+    position: absolute;
+    left: 8.5%;
+    top: 0;
+
+}
+
+.disc {
+    color: red;
+    font-weight: 600;
+}
+
+.money {
+    color: inherit;
+    font-weight: 500;
+}
+
+.second-cn {
+    height: 40rem;
+
+    & .cards {
+        width: 20rem !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        & img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 10px;
+        }
+
+        & button {
+            width: 100%;
+            padding: 10px 20px;
+            background: green;
+            border: none;
+            outline: none;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+    }
+}
+
+.first li .full-menu {
+    /* background: #000; */
+    position: fixed;
+    height: max-content;
+    left: 0;
+    top: 5%;
+    transform: translate(0, 25%);
+    padding: 0;
+
+    & li {
+        height: max-content;
+        min-width: 15rem;
+        min-height: 3rem;
+        text-align: center;
+    }
+
+    & li ul {
+        width: 83vw;
+        height: 83vh;
+        position: fixed;
+        top:0;
+        transform: translateX(9.2%);
+        display: none;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: -10%;
+        }
+    }
+
+    & li:hover ul {
+        display: block;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 50%;
+        top: -100%;
+        background: transparent;
+    }
+}
+
+.mega-menu-wrapper {
+    width: 100%;
+    height: 100%;
+    column-width: 16rem;
+    padding:0 20px;
+    overflow-X: auto;
+
+    & div {
+        display: block;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        break-inside: avoid;
+        align-items: baseline;
+        padding: 10px;
+        justify-content: space-evenly;
+        gap: 10px;
+
+        & h4 {
+            color: inherit;
+            font-weight: 500;
+            border-bottom: 1px solid #c0c0c0;
+            padding: 10px 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        & a {
+            color: #303030;
+            text-decoration: none;
+
+            &:hover {
+                border-bottom: 1px solid #333;
+            }
+        }
+    }
+}
+#menu{
+    position: fixed;
+    width: 100%;
+    height: max-content;
+    z-index: 999;
+    background: #ffffff41;
+    backdrop-filter: blur(10px);
+    top: 0;
+}
+.blank{
+    width: 100%;
+    height: 10rem;
+}
+.blanket{
+    width: 100%;
+    height: 100%;
+    background: #00000059;
 }
