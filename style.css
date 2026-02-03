@@ -16,7 +16,6 @@ body {
     font-style: normal;
 }
 
-
 .smallNav {
     background-color: var(--sbg);
     width: 100%;
@@ -520,6 +519,8 @@ body {
     /* background: #000; */
     position: fixed;
     height: max-content;
+    box-shadow: none;
+    border: 1px solid #c0c0c0;
     left: 0;
     top: 5%;
     transform: translate(0, 25%);
@@ -530,6 +531,22 @@ body {
         min-width: 15rem;
         min-height: 3rem;
         text-align: center;
+        & h4{
+            width: 100%;
+        }
+        & h4::after{
+            content: url(arrow.svg);
+            position: absolute;
+            right: 10px;
+
+        }
+        &:hover h4::after{
+            transform: rotate(-90deg);
+            transition: transform .3s ease;
+        }
+        & div h4::after{
+            content: "";
+        }
     }
 
     & li ul {
@@ -604,8 +621,10 @@ body {
     width: 100%;
     height: max-content;
     z-index: 999;
-    background: #ffffff41;
+    /* background: #ffffff41; */
     backdrop-filter: blur(10px);
+    /* box-shadow: 1px 1px 5px rgb(182, 182, 182); */
+    transition: box-shadow .3s ease-in;
     top: 0;
 }
 .blank{
@@ -616,4 +635,10 @@ body {
     width: 100%;
     height: 100%;
     background: #00000059;
+}
+.slide{
+    width: 100%;
+    height:30rem;
+    overflow: hidden;
+    padding: 10px 0;
 }

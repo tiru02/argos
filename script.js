@@ -3,6 +3,8 @@ let right = document.querySelector('input[right]')
 let mover = document.querySelector('.fixed-container')
 let imageScroller=document.querySelector('.image-scroller')
 let images=document.querySelectorAll('.image-scroller img')
+let menu =document.querySelector('#menu')
+
 const watcher=new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
@@ -35,3 +37,9 @@ right.onclick = () => {
 //     images[i].style.transform=`translateX(${i*100}%)` 
 //     watcher.observe(images[i])
 // }
+document.onscroll=()=>{
+    menu.style.boxShadow=`1px 1px 5px #c0c0c0`
+}
+document.onscrollend=()=>{
+    menu.style.boxShadow='none'
+}
