@@ -17,13 +17,52 @@
       flex-direction: column;
       justify-content: space-evenly; */
     }
+    .footer-section .container{
+    display: flex;
+    flex-direction: column; 
+    }
+    .footer-section .row{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      min-width: 70%;
+      & div h5,p{
+        text-align: center;
+        font-size: .9rem;
+      }
+      & a{
+        display: block;
+        text-align: center;
+      }
+      & .payment-icons{
+        padding:0 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      &>div:nth-child(2n){
+        border-left: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .footer-section .row:last-child{
+       & .social-icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+    }
   </style>
   <footer class="argos-footer">
   <div class="container">
 
     <!-- Help Links -->
     <div class="row border-bottom py-4">
-      <div class="col-md-3 col-sm-6 footer-title">
+      <div class="col-md-3 col-sm-6 footer-title ">
         <h5>Need help?</h5>
         <ul>
         <li><a href="#">Help & FAQs</a></li>
@@ -87,7 +126,7 @@
     <!-- ROW 1 -->
     <div class="row border-bottom py-4">
       <!-- Returning an item -->
-      <div class="col-md-6 text-center text-md-start">
+      <div class="col-md-6 text-center text-md-start" style="display: flex; flex-direction: column;justify-content: space-evenly;">
         <h5>Returning an item</h5>
         <p>For returns, product support and repairs</p>
         <a href="https://help.argos.co.uk/help/refunds-&-returns/returns-product-support-and-repairs/returnsproductsupportrepairs" class="footer-link">Learn more here</a>
@@ -111,13 +150,10 @@
 
         </div>
       </div>
-    </div
-  
-
-    <!-- ROW 2 -->
+    </div>
     <div class="row py-4">
       <!-- Follow us -->
-      <div class="col-md-6 text-center text-md-start">
+      <div class="col-md-6 text-center text-md-start" style="">
         <h5>Follow us</h5>
         <div class="social-icons">
           <a href="https://www.youtube.com/user/argoscouk"><i class="fab fa-youtube"></i></a>
@@ -131,7 +167,7 @@
       <!-- Download app -->
       <div class="col-md-6 text-center text-md-start">
         <h5>Download our app</h5>
-        <div class="app-buttons">
+        <div class="app-buttons" style="display: flex;">
           <a href="https://apps.apple.com/gb/app/argos-shop-tech-toys-more/id370371087">
           <img src="https://media.4rgos.it/i/Argos/app-apple-prompt?w=234&h=78&qlt=75&fmt=webp">
           </a>
