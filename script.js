@@ -1,20 +1,11 @@
 let left = document.querySelector('input[left]')
 let right = document.querySelector('input[right]')
 let mover = document.querySelector('.fixed-container')
-let imageScroller=document.querySelector('.image-scroller')
-let images=document.querySelectorAll('.image-scroller img')
-let menu =document.querySelector('#menu')
+let imageScroller = document.querySelector('.image-scroller')
+let images = document.querySelectorAll('.image-scroller img')
+let menu = document.querySelector('#menu')
+const scroller = document.querySelectorAll('.scroller-xd')
 
-const watcher=new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            console.log('elem is visible')
-        }else{
-            return false
-            console.log('elem is not visible')
-        }
-    })
-})
 let length = 0
 left.onclick = () => {
     length -= 25
@@ -22,7 +13,7 @@ left.onclick = () => {
     if (length <= -50) {
         left.style.display = 'none'
         right.style.display = 'flex'
-        length=0
+        length = 0
     } else {
         left.style.display = 'flex'
         right.style.display = 'none'
@@ -33,13 +24,33 @@ right.onclick = () => {
     left.style.display = 'flex'
     right.style.display = 'none'
 }
-// for(let i=0;i<images.length;i++){
-//     images[i].style.transform=`translateX(${i*100}%)` 
-//     watcher.observe(images[i])
-// }
-document.onscroll=()=>{
-    menu.style.boxShadow=`1px 1px 5px #c0c0c0`
+
+for (const i of scroller) {
+  const left = i.childNodes[1], right = i.childNodes[3], scrl = i.childNodes[5]
+
+  const maxScroll = scrl.scrollWidth - scrl.clientWidth;
+  const STEP = 600;
+
+  left.addEventListener('click', () => {
+    scrl.scrollBy({
+      left: -STEP,
+      behavior: 'smooth'
+    });
+  });
+
+  right.addEventListener('click', () => {
+    scrl.scrollBy({
+      left: STEP,
+      behavior: 'smooth'
+    });
+  });
+
 }
-document.onscrollend=()=>{
-    menu.style.boxShadow='none'
+
+
+document.onscroll = () => {
+    menu.style.boxShadow = `1px 1px 5px #c0c0c0`
+}
+document.onscrollend = () => {
+    menu.style.boxShadow = 'none'
 }
