@@ -1,0 +1,127 @@
+argos-footer {
+  background-color: #f5f5f5;
+  font-size: 15px;
+  color: #000;
+}
+.footer-title ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-title ul li {
+  margin-bottom: 12px;
+}
+.footer-title h5 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  font: bold;
+}
+.footer-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-title a:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  background: #f7f7f7;
+  border-top: 1px solid #ddd;
+  justify-content: center;
+}
+
+.footer-section h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  color: #555;
+  font-size: 20px;
+}
+
+.footer-link {
+  color: #0d6efd;
+  font-weight: 500;
+  text-decoration:underline;
+
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Payment icons */
+.payment-icons img {
+  height: 20px;
+  margin-right: 12px;
+  margin-top: 5px;
+}
+
+/* Social icons */
+.social-icons a {
+  font-size: 22px;
+  color: #000;
+  margin-right: 15px;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+}
+
+/* App buttons */
+.app-buttons img {
+  height: 40px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.footer-legal {
+  background: #fff;
+  padding: 40px 0 30px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.footer-brands img {
+  height: 32px;
+  margin: 0 12px;
+  vertical-align: middle;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500;
+}
+
+.footer-links span {
+  color: #aaa;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.footer-small-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: #444;
+}
+
+.footer-small-text p {
+  margin-bottom: 12px;
+}
+
+
+
+    
+
+
