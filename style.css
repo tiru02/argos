@@ -464,7 +464,7 @@ body {
 
 .dash-image {
     width: 85%;
-    height: 10rem;
+    height: 11rem;
     border-radius: 10px;
     background: url(https://media.4rgos.it/i/Argos/4726-M020-a-list-desktab?w=auto&qlt=50&fmt=webp&noiser=0&);
     background-position: center;
@@ -527,7 +527,7 @@ body {
     box-shadow: none;
     border: 1px solid #c0c0c0;
     left: 0;
-    top: 5%;
+    top: 0%;
     transform: translate(0, 25%);
     padding: 0;
 
