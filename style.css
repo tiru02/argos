@@ -147,7 +147,7 @@ body {
     & ul::before {
         position: absolute;
         content: "";
-        transform: translateY(-20%);
+        transform: translate(10%,-20%);
         width: 100%;
         height: 100%;
         background: transparent;
@@ -309,7 +309,7 @@ body {
         left: 0;
         width: 10%;
         height: 100%;
-        background: linear-gradient(to right, var(--bg), #ffffff51);
+        background: linear-gradient(to right, var(--bg), #ffffffc8);
         z-index: 9;
     }
 
@@ -319,10 +319,10 @@ body {
         right: 0;
         width: 10%;
         height: 100%;
-        background: linear-gradient(to left, var(--bg), #ffffff51);
+        background: linear-gradient(to left, var(--bg), #ffffffc8);
     }
 
-    & input[left] {
+    & input[right] {
         width: 55px;
         height: 55px;
         background: rgb(120, 120, 233);
@@ -336,13 +336,13 @@ body {
         transform: translate(0, -50%);
         z-index: 9;
         text-shadow: 1px 1px 3px gray;
+        display: none;
         border: none;
     }
 
-    & input[right] {
+    & input[left] {
         width: 55px;
         height: 55px;
-        display: none;
         background: rgb(120, 120, 233);
         color: var(--bg);
         font-size: 2rem;
@@ -369,7 +369,7 @@ body {
     position: absolute;
     left: 10%;
     gap: 20px;
-    transition: all .2s ease;
+    transition: all .5s ease;
 
     & .card {
         width: 6rem;
@@ -377,8 +377,9 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        align-items: center;
-        justify-content: center;
+        align-items:center;
+        justify-content: baseline;
+        text-align: center;
 
         & img {
             width: 80%;
@@ -424,9 +425,9 @@ body {
     position: relative;
     width: 100%;
     height: 30rem;
-    margin: 2rem 0;
+    margin:0 0  1rem 0;
     display: flex;
-    padding: 3rem 0 10px 0;
+    padding: 3rem 0 3rem 0;
     align-items: center;
     justify-content: center;
     gap: 15px;
@@ -442,8 +443,12 @@ body {
             width: 100%;
             aspect-ratio: 4/3;
             border-radius: 10px;
+            margin-bottom: 10%;
         }
 
+        & a{
+            color: blue;
+        }
         & button {
             width: 100%;
             padding: 10px 20px;
@@ -460,12 +465,14 @@ body {
 
 .dash-image {
     width: 85%;
-    height: 10rem;
+    height: 11rem;
     border-radius: 10px;
     background: url(https://media.4rgos.it/i/Argos/4726-M020-a-list-desktab?w=auto&qlt=50&fmt=webp&noiser=0&);
     background-position: center;
     background-size: cover;
-    margin: 0 auto;
+    margin:4rem 0;
+    margin-top: 2rem;
+    margin-inline: auto;
 }
 
 .headline {
@@ -521,7 +528,7 @@ body {
     position: fixed;
     height: max-content;
     left: 0;
-    top: 5%;
+    top: 0%;
     transform: translate(0, 25%);
     padding: 0;
 
@@ -604,8 +611,10 @@ body {
     width: 100%;
     height: max-content;
     z-index: 999;
-    background: #ffffff41;
+    /* background: #ffffff41; */
     backdrop-filter: blur(10px);
+    /* box-shadow: 1px 1px 5px rgb(182, 182, 182); */
+    transition: box-shadow .3s ease-in;
     top: 0;
 }
 .blank{
@@ -616,4 +625,10 @@ body {
     width: 100%;
     height: 100%;
     background: #00000059;
+}
+.slide{
+    width: 100%;
+    height:30rem;
+    overflow: hidden;
+    padding: 10px 0;
 }
