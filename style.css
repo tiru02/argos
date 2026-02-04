@@ -647,7 +647,7 @@ body {
 
 .slide {
   width: 100%;
-  height: 30rem;
+  height: 26.5rem;
   overflow: hidden;
   padding: 10px 0;
 }
@@ -773,7 +773,8 @@ footer {
   background: linear-gradient(to right, #fff 70%, #ffffff3b);
   z-index: 9;
 }
-.dash-img-2,.dash-img-3 {
+.dash-img-2,
+.dash-img-3 {
   width: 85%;
   height: 13rem;
   background: url(https://media.4rgos.it/i/Argos/4926-M020-homepage-dyson-app-only-desktab-red?w=auto&qlt=50&fmt=webp&noiser=0&);
@@ -831,44 +832,138 @@ footer {
   background: url(https://media.4rgos.it/i/Argos/4025-M020-argos-marketing-sign-up-desktab?w=auto&qlt=50&fmt=webp&noiser=0&);
   background-size: cover;
 }
-.points-card{
-    width: 85%;
-    height: 25rem;
-    background: linear-gradient(to left,#8839e9,#8223FA);
-    margin: 0 auto;
-    border-radius: 10px;
+.points-card {
+  width: 85%;
+  height: 25rem;
+  background: linear-gradient(to left, #8839e9, #8223fa);
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  & .data {
+    width: 47%;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    & .data{
-        width: 47%;
-        height: 100%;
-        display: flex;
-        padding: 2rem;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        & h2,p{
-            color: #fff;
-        }
-        & p{
-            padding: 1rem 0;
-        }
-        & input{
-            padding:10px 20px;
-            font-size: 1.2rem;
-            color: #fff;
-            border: 1px solid #fff;
-            border-radius: 10px;
-            background: transparent;
-        }
+    padding: 2rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    & h2,
+    p {
+      color: #fff;
     }
-    & img{
-        width: 53%;
+    & p {
+      padding: 1rem 0;
     }
+    & input {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      background: transparent;
+    }
+  }
+  & img {
+    width: 53%;
+  }
 }
-.post-form{
+.post-form {
+  width: 85%;
+  height: 5.5rem;
+  background: #135ca3;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  & form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    & .postcode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      border-radius: 5px;
+      outline: 1px solid #fff;
+      & input {
+        padding: 15px;
+        caret-color: lightseagreen;
+        border: none;
+        outline: none;
+
+      }
+      & input[type="button"] {
+        color: #fff;
+        background: transparent;
+      }
+    }
+  }
+}
+.container{
     width: 85%;
-    height: 5.5rem;
-    background: #135CA3;
-    margin: 1rem auto;
-}
+    margin-inline: auto;
+   & h2,h3{
+      font-weight: 500;
+    }
+   & p{
+    margin:.5rem 1rem;
+    color: #111;
+    font-weight: 400;
+   }
+  }
+.toggle-checkbox {
+    display: none;
+    
+  }
+
+  .extra-content {
+    display: none;    
+  }
+
+  .toggle-checkbox:checked ~ .content-wrapper .extra-content {
+    display: block;
+  }
+
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    background: #f1f8f6;
+    cursor: pointer;
+    font-weight: bold;
+    color: #005a70;
+    margin-top: 20px;
+  }
+
+  .toggle-button span {
+    background: #f1f8f6;
+    padding: 0 15px;
+    z-index: 1;
+    margin: 0 auto;
+    text-decoration: underline;
+  }
+
+  .text-less { display: none; }
+  .toggle-checkbox:checked ~ .toggle-button .text-more { display: none; }
+  .toggle-checkbox:checked ~ .toggle-button .text-less { display: inline; }
+
+  .toggle-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .toggle-button { position: relative; }
+
+  a { color: #005a70; text-decoration: underline; font-weight: 500; }
+  a:hover { text-decoration: none; }
+  
