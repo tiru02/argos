@@ -81,7 +81,8 @@ body {
   display: flex;
   justify-content: space-around;
 
-  & li h4 {
+  & li h4,li a {
+    text-decoration: none;
     font-size: 1rem;
     color: inherit;
     font-weight: inherit;
@@ -99,7 +100,7 @@ body {
   display: flex;
   align-items: center;
 
-  & li {
+  & li,a {
     display: flex;
     align-items: center;
     justify-content: center;
