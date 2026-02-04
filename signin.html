@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .signin-container {
+      max-width: 520px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .divider:not(:empty)::before {
+      margin-right: 10px;
+    }
+
+    .divider:not(:empty)::after {
+      margin-left: 10px;
+    }
+   
+    .text-center img {
+    height: 25px;
+     gap: 15px; 
+     margin: 10px ;
+    }
+    .password-wrapper {
+      position: relative;
+    }
+
+    .show-btn {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .btn-success {
+      background-color: #008542;
+      border-color: #008542;
+    }
+
+    .btn-success:hover {
+      background-color: #006f36;
+    }
+    .new-customers {
+      text-align: center;
+      margin: 60px auto;
+      max-width: 700px;
+    }
+
+    .new-customers h2 {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+   .btn-outline-green {
+      color: #008542;
+      border: 2px solid #008542;
+      padding: 10px 0; 
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .btn-outline-green:hover {
+      background-color: #008542;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signin-container">
+    <h2 class="text-center mb-4">Sign in</h2>
+
+    <div class="divider">Part of the family</div>
+
+    <!-- Logo placeholder -->
+    <div class="text-center mb-4">
+     <img src="https://documents.4rgos.it/v1/static/argos-logo?qlt=75&fmt=webp" alt="Argos">
+      <img src="https://documents.4rgos.it/v1/static/tu-logo?qlt=75&fmt=webp" alt="Tu">
+      <img src="https://documents.4rgos.it/v1/static/habitat-logo?qlt=75&fmt=webp" alt="Habitat">
+    </div> 
+ 
+    <form>
+      <!-- Email -->
+      <div class="mb-4">
+        <label class="form-label fw-bold">Email address</label>
+        <input type="email" class="form-control" required>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-2">
+        <label class="form-label fw-bold">Password</label>
+        <div class="password-wrapper">
+          <input type="password" class="form-control" required>
+          <button type="button" class="btn btn-outline-secondary show-btn">
+            Show
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <a href="https://www.argos.co.uk/forgotten-password" class="text-decoration-none">Forgotten your password?</a>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
+        Sign in securely
+      </button>
+    </form>
+  </div>
+
+   <div class="container">
+    <div class="new-customers">
+      <h2>New customers</h2>
+
+      <button class="btn btn-outline-green w-75 py-2 fw-bold">
+        Create an account
+      </button>
+    </div>
+  </div> 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
