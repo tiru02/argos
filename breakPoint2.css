@@ -1,0 +1,34 @@
+@media only screen and (max-width:1000px){
+ .bigMenu{
+    padding: 3rem 0 0 0;
+    height: 7rem;
+    position: relative;
+    display: flex;
+    .first{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+    }
+    img{
+        width: 60px;
+        margin: 0 1rem;
+    }
+    .search{
+        width: 50%;
+        input{
+        height: 80%;
+        }
+    }
+    .trevo-bt{
+        width: 15%;
+        height: 45px;
+    }
+    .second{
+        width: 30%;
+    }
+ }
+ .rem{
+   font-size: .9rem;
+ }
+}
