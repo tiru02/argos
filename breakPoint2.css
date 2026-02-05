@@ -1,0 +1,47 @@
+@media only screen and (max-width:1000px){
+ .bigMenu{
+    padding: 0 0 3rem 0;
+    height: 7rem;
+    position: relative;
+    display: flex;
+    .first{
+        position: absolute;
+        left: 0;
+        bottom:0;
+        width: 50%;
+    }
+    img{
+        width: 60px;
+        margin: 0 1rem;
+    }
+    .search{
+        width: 50%;
+        input{
+        height: 80%;
+        }
+        input[type=button]{
+            width: 30%;
+        }
+    }
+    .trevo-bt{
+        width: 15%;
+        height: 45px;
+    }
+    .second{
+        width: 30%;
+    }
+ }
+ .rem{
+   font-size: .9rem;
+    .rItem:first-child{
+        width: 100%;
+        border: none;
+    }
+    .rItem:not(:first-child){
+    display: none;
+   }
+ }
+ .slide{
+    height: 10rem;
+ }
+}
